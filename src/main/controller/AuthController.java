@@ -44,6 +44,11 @@ public class AuthController {
         LoginResponse response = authService.login(request);
         return ApiResponse.success("登录成功", response);
     }
+    @PostMapping("/register")
+    public ApiResponse<LoginResponse> register(@Valid @RequestBody LoginRequest request) {
+        LoginResponse response = authService.login(request);
+        return ApiResponse.success("登录成功", response);
+    }
 
     /**
      * 刷新JWT令牌接口
